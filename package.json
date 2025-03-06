@@ -4,12 +4,28 @@
   "description": "A system tray application for real-time Bitcoin price tracking",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder build",
+    "dist": "electron-builder"
   },
   "dependencies": {
-    "axios": "^1.6.2",
-    "electron": "^27.1.2"
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "electron": "^27.1.2",
+    "electron-builder": "^24.9.1"
   },
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "build": {
+    "asar": false,
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "dir",
+      "icon": "bitcoin.png",
+      "signAndEditExecutable": false
+    }
+  }
 }

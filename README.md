@@ -17,6 +17,12 @@ A lightweight system tray application that provides real-time Bitcoin price trac
    ```bash
    npm install
    ```
+3. Build executable:
+   ```bash
+   npm run dist
+   ```
+
+The Windows executable will be created in `dist/win-unpacked` directory
 
 ## Usage
 
@@ -35,7 +41,9 @@ A lightweight system tray application that provides real-time Bitcoin price trac
 
 - Built with Electron.js
 - Uses CoinGecko API for reliable price data
+- Packaged using electron-builder with Windows NSIS installer
 - Automatic price updates every minute
+- System tray tooltip displays current Bitcoin price
 - System notifications for significant price changes
 
 ## Dependencies
